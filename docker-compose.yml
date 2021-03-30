@@ -25,8 +25,8 @@ services:
     ports:
      - 3303:3306
     volumes:
-     - ./mysql/conf.d:/etc/mysql/conf.d
-     - ./mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+     - ./config/mysql/conf.d:/etc/mysql/conf.d
+     - ./config/mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
      - ./mysql_data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 123456
