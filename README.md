@@ -1,26 +1,75 @@
-# https://github.com/docker-library/redmine
+# ONLYOFFICE Docker
 
-## Maintained by: [the Docker Community](https://github.com/docker-library/redmine)
+![](https://libs.websoft9.com/common/websott9-cloud-installer.png) 
 
-This is the Git repo of the [Docker "Official Image"](https://github.com/docker-library/official-images#what-are-official-images) for [`redmine`](https://hub.docker.com/_/redmine/) (not to be confused with any official `redmine` image provided by `redmine` upstream). See [the Docker Hub page](https://hub.docker.com/_/redmine/) for the full readme on how to use this Docker image and for information regarding contributing and issues.
+## Introduction
 
-The [full image description on Docker Hub](https://hub.docker.com/_/redmine/) is generated/maintained over in [the docker-library/docs repository](https://github.com/docker-library/docs), specifically in [the `redmine` directory](https://github.com/docker-library/docs/tree/master/redmine).
+[English](/README.md) | [简体中文](/README-zh.md)  
 
-## See a change merged here that doesn't show up on Docker Hub yet?
+This repository is an **Cloud Native solution** powered by [Websoft9](https://www.websoft9.com) to for installing [ONLYOFFICE](https://github.com/ONLYOFFICE/Docker-CommunityServer) and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
 
-For more information about the full official images change lifecycle, see [the "An image's source changed in Git, now what?" FAQ entry](https://github.com/docker-library/faq#an-images-source-changed-in-git-now-what).
+## System Requirements
 
-For outstanding `redmine` image PRs, check [PRs with the "library/redmine" label on the official-images repository](https://github.com/docker-library/official-images/labels/library%2Fredmine). For the current "source of truth" for [`redmine`](https://hub.docker.com/_/redmine/), see [the `library/redmine` file in the official-images repository](https://github.com/docker-library/official-images/blob/master/library/redmine).
+The following are the minimal recommended requirements:
 
----
+* **OS**: 64-bit Red Hat, CentOS, 64-bit Debian, Ubuntu or other compatible distributive with kernel version 3.8 or later
+* **ARCH**: amd64
+* **RAM**: 4 GB or more
+* **CPU**: dual-core 2 GHz or higher
+* **HDD**: at least 2 GB of free space
+* **Swap file**: at least 2 GB
+* **Docker version**: 1.9.0 or later
 
--	[![build status badge](https://img.shields.io/github/workflow/status/docker-library/redmine/GitHub%20CI/master?label=GitHub%20CI)](https://github.com/docker-library/redmine/actions?query=workflow%3A%22GitHub+CI%22+branch%3Amaster)
--	[![build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/update.sh/job/redmine.svg?label=Automated%20update.sh)](https://doi-janky.infosiftr.net/job/update.sh/job/redmine/)
+To learn more, refer to the [Recommended System Requirements](https://github.com/ONLYOFFICE/Docker-CommunityServer#recommended-system-requirements): 
 
-| Build | Status | Badges | (per-arch) |
-|:-:|:-:|:-:|:-:|
-| [![amd64 build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/amd64/job/redmine.svg?label=amd64)](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/redmine/) | [![arm32v5 build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/arm32v5/job/redmine.svg?label=arm32v5)](https://doi-janky.infosiftr.net/job/multiarch/job/arm32v5/job/redmine/) | [![arm32v7 build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/arm32v7/job/redmine.svg?label=arm32v7)](https://doi-janky.infosiftr.net/job/multiarch/job/arm32v7/job/redmine/) | [![arm64v8 build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/redmine.svg?label=arm64v8)](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/redmine/) |
-| [![i386 build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/i386/job/redmine.svg?label=i386)](https://doi-janky.infosiftr.net/job/multiarch/job/i386/job/redmine/) | [![mips64le build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/mips64le/job/redmine.svg?label=mips64le)](https://doi-janky.infosiftr.net/job/multiarch/job/mips64le/job/redmine/) | [![ppc64le build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/redmine.svg?label=ppc64le)](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/redmine/) | [![s390x build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/s390x/job/redmine.svg?label=s390x)](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/redmine/) |
-| [![put-shared build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/put-shared/job/light/job/redmine.svg?label=put-shared)](https://doi-janky.infosiftr.net/job/put-shared/job/light/job/redmine/) |
+## Pre-Installation
 
-<!-- THIS FILE IS GENERATED BY https://github.com/docker-library/docs/blob/master/generate-repo-stub-readme.sh -->
+If you have not install Docker and Docker-Compose, refer to the following commands to install it:
+
+```
+curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
+curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+ln -sf /usr/local/bin/docker-compose  /usr/bin
+```
+
+## Installation
+
+We assume that you are already familiar with Docker, and you can modify [docker-compose file](docker-compose.workspace.yml) by yourself
+
+```
+git clone --depth=1 https://github.com/Websoft9/docker-onlyofficecommunityserver
+cd docker-onlyofficecommunityserver
+docker-compose up -d
+```
+
+## Parameters
+
+* **Services**: ONLYOFFICE CommunityServer, ONLYOFFICE DocumentServer, phpMyAdmin, MySQL5.7
+* **Ports**: 9003 for ONLYOFFICE CommunityServer, 9090 for phpMyAdmin, 9002 for ONLYOFFICE DocumentServer
+
+## Subscription
+
+We have publish ONLYOFFICE CommunityServer on major Cloud Platform, just [subscribe it](https://apps.websoft9.com/onlyoffice) you can deployment it automatically and get our Enterprise Support to ensure high availability of applications.  
+
+What you get with a Enterprise subscription?
+
+* Knowledge: Answers and guidance from product experts
+* Support: Everything you need for technical support, e.g Enable HTTPS, Upgrade guide
+* Security: Security services and tools to protect your software
+
+## Links
+
+* [Documentation](https://support.websoft9.com/docs/onlyoffice)
+* [CHANGELOG](/CHANGELOG.md)
+* [License](/License.md)
+
+## FAQ
+
+#### Do I need to change the password before docker-compose up?
+
+Yes, you should modify all database password and application password at docker-compose file for production
+
+#### What the default username and password?
+
+Refer to comment area at the top of docker-compose file
