@@ -1,4 +1,4 @@
-# ONLYOFFICE Docker
+# Redmine Docker
 
 ![](https://libs.websoft9.com/common/websott9-cloud-installer.png) 
 
@@ -6,7 +6,7 @@
 
 [English](/README.md) | [简体中文](/README-zh.md)  
 
-This repository is an **Cloud Native solution** powered by [Websoft9](https://www.websoft9.com) to for installing [ONLYOFFICE](https://github.com/ONLYOFFICE/Docker-CommunityServer) and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
+This repository is an **Cloud Native solution** powered by [Websoft9](https://www.websoft9.com) to for installing [Redmine](https://github.com/docker-library/redmine) and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
 
 ## System Requirements
 
@@ -20,7 +20,7 @@ The following are the minimal recommended requirements:
 * **Swap file**: at least 2 GB
 * **Docker version**: 1.9.0 or later
 
-To learn more, refer to the [Recommended System Requirements](https://github.com/ONLYOFFICE/Docker-CommunityServer#recommended-system-requirements): 
+To learn more, refer to the [Recommended System Requirements](https://www.redmine.org/projects/redmine/wiki/RedmineInstall#Requirements): 
 
 ## Pre-Installation
 
@@ -35,22 +35,22 @@ ln -sf /usr/local/bin/docker-compose  /usr/bin
 
 ## Installation
 
-We assume that you are already familiar with Docker, and you can modify [docker-compose file](docker-compose.workspace.yml) by yourself
+We assume that you are already familiar with Docker, and you can modify [docker-compose file](docker-compose.yml) by yourself
 
 ```
-git clone --depth=1 https://github.com/Websoft9/docker-onlyofficecommunityserver
-cd docker-onlyofficecommunityserver
+git clone --depth=1 https://github.com/Websoft9/docker-redminecommunityserver
+cd docker-redminecommunityserver
 docker-compose up -d
 ```
 
 ## Parameters
 
-* **Services**: ONLYOFFICE CommunityServer, ONLYOFFICE DocumentServer, phpMyAdmin, MySQL5.7
-* **Ports**: 9003 for ONLYOFFICE CommunityServer, 9090 for phpMyAdmin, 9002 for ONLYOFFICE DocumentServer
+* **Services**: Redmine, MySQL5.7
+* **Ports**: 9007 for Redmine, 9090 for phpMyAdmin, 3306 for MySQL
 
 ## Subscription
 
-We have publish ONLYOFFICE CommunityServer on major Cloud Platform, just [subscribe it](https://apps.websoft9.com/onlyoffice) you can deployment it automatically and get our Enterprise Support to ensure high availability of applications.  
+We have publish Redmine CommunityServer on major Cloud Platform, just [subscribe it](https://apps.websoft9.com/redmine) you can deployment it automatically and get our Enterprise Support to ensure high availability of applications.  
 
 What you get with a Enterprise subscription?
 
@@ -60,7 +60,7 @@ What you get with a Enterprise subscription?
 
 ## Links
 
-* [Documentation](https://support.websoft9.com/docs/onlyoffice)
+* [Documentation](https://support.websoft9.com/docs/redmine)
 * [CHANGELOG](/CHANGELOG.md)
 * [License](/License.md)
 

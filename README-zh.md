@@ -1,4 +1,4 @@
-# Docker版ONLYOFFICE
+# Docker版Redmine
 
 ![](https://libs.websoft9.com/common/websott9-cloud-installer.png) 
 
@@ -6,7 +6,7 @@
 
  [简体中文](/README-zh.md) | [English](/README.md) 
 
-本项目是由[Websoft9](https://www.websoft9.com) 基于[ONLYOFFICE 官方Docker](https://github.com/ONLYOFFICE/Docker-CommunityServer)研发的云原生**ONLYOFFICE**程序。程序进行了预配置，用户使用一条命令即可自动完成安装， 大大简化了复杂的安装以及配置过程。
+本项目是由[Websoft9](https://www.websoft9.com) 基于[Redmine 官方Docker](https://github.com/docker-library/redmine)研发的云原生**Redmine**程序。程序进行了预配置，用户使用一条命令即可自动完成安装， 大大简化了复杂的安装以及配置过程。
 
 ## 配置要求
 
@@ -20,7 +20,7 @@
 * **Swap分区**: 2GB以上
 * **Docker版本**: 1.9.0以上
 
-更多配置信息请参照[系统配置](https://github.com/ONLYOFFICE/Docker-CommunityServer#recommended-system-requirements)
+更多配置信息请参照[系统配置](https://www.redmine.org/projects/redmine/wiki/RedmineInstall#Requirements)
 
 ## 预安装
 
@@ -38,8 +38,8 @@ ln -sf /usr/local/bin/docker-compose  /usr/bin
 如果你对Docker应用很熟悉，你可以修改[docker-compose file](docker-compose.yml)来满足自己特定需求 
 
 ```
-git clone --depth=1 https://github.com/Websoft9/docker-onlyofficecommunityserver
-cd docker-onlyofficecommunityserver
+git clone --depth=1 https://github.com/Websoft9/docker-redmine
+cd docker-redmine
 docker-compose up -d
 ```
 
@@ -47,14 +47,13 @@ docker-compose up -d
 
 | 服务       | 端口号                                  | 容器名                 |
 | ---------- | ------------------------------------- | -------------------- |
-| ONLYOFFICE CommunityServer   | 9003 | onlyoffice-mysql-server         |
-| phpMyAdmins     | 9090    |       onlyoffice-community-server               |
-| ONLYOFFICE DocumentServer     | 9002    |         onlyoffice-document-server             |
-
+| redmine   | 9007 | redmine         |
+| mysql     | 3306   |       redmine-mysql                |
+| phpmyadmin     | 9090   |       phpmyadmin               |
 
 ## 如何购买
 
-我们在主流云平台上发布了*ONLYOFFICE CommunityServer*，您可以通过[购买ONLYOFFICE](https://apps.websoft9.com/onlyoffice)自动部署它并获得我们的企业支持，以确保应用程序的高可用性。
+我们在主流云平台上发布了*Redmine CommunityServer*，您可以通过[购买Redmine](https://apps.websoft9.com/redmine)自动部署它并获得我们的企业支持，以确保应用程序的高可用性。
 
 购买后可享受哪些服务：
 
@@ -64,16 +63,16 @@ docker-compose up -d
 
 ## 链接
 
-* [文档](https://support.websoft9.com/docs/onlyoffice)
+* [文档](https://support.websoft9.com/docs/redmine)
 * [记录](/CHANGELOG.md)
 * [许可证](/License.md)
 
 ## 常见问题
 
-#### 启动ONLYOFFICE前需要更改密码吗？
+#### 启动Redmine前需要更改密码吗？
 
 是的, 在生产环境中，您应该在docker compose文件中修改所有数据库密码和应用程序密码
 
-#### ONLYOFFICE默认的用户名和密码是什么？
+#### Redmine默认的用户名和密码是什么？
 
 请参照[docker-compose file](docker-compose.yml)的上方注释区域
