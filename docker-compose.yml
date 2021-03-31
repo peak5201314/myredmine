@@ -12,11 +12,14 @@ services:
     ports:
      - 9007:3000
     volumes: 
-     - /data/wwwroot/redmine/data/:/usr/src/redmine/files
+     - ./data/:/usr/src/redmine/files
+     - ./plugins:/usr/src/redmine/plugins
+     - ./themes:/usr/src/redmine/public/themes
     environment:
       REDMINE_DB_MYSQL: db
       REDMINE_DB_PASSWORD: 123456
       REDMINE_SECRET_KEY_BASE: supersecretkey
+      REDMINE_PLUGINS_MIGRATE: "true"
 
   db:
     image: mysql:5.7
