@@ -1,5 +1,6 @@
 # add this file
 # default MySQL root password is 123456
+# default remine user admin, password admin
 
 version: '3.1'
 
