@@ -76,7 +76,7 @@ By default, the available users are:
 
 | Username    | Password |
 | ------- | -------- |
-|  admin | 123456  |
+|  admin | admin  |
 
 #### Services and Ports
 

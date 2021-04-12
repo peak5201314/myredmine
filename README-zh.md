@@ -81,7 +81,7 @@ sudo docker-compose -f docker-compose-production.yml up -d
 
 | 用户名    | 密码 |
 | ------- | -------- |
-|  admin | 123456  |
+|  admin | admin  |
 
 #### 服务和端口
 
