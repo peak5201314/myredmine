@@ -9,22 +9,15 @@
     "memory": "4",
     "disk": "20",
     "swap": "2",
-    "url": "https://github.com/redmine/docker#recommended-system-requirements"
+    "url": "https://www.redmine.org/projects/redmine/wiki/RedmineInstall#Requirements"
   },
 
   "services":[
     {
       "name": "redmine-server",
-      "port": "9003",
+      "port": "redmine",
       "description_cn": "浏览器访问 Redmine",
       "description_en": "Browser access to Redmine by http",
-      "required": "Y"
-    },
-    {
-      "name": "redmine-document-server",
-      "port": "9002",
-      "description_cn": "浏览器访问 Redmine Document",
-      "description_en": "Browser access to  Redmine Document by http",
       "required": "Y"
     },
     {
