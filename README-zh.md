@@ -40,7 +40,7 @@ ln -sf /usr/local/bin/docker-compose  /usr/bin
 ```
 git clone --depth=1 https://github.com/Websoft9/docker-redmine
 cd docker-redmine
-docker-compose up -d
+docker-compose -f docker-compose-production.yml up -d
 ```
 
 ## 参数（服务及端口）
