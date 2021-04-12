@@ -64,17 +64,19 @@ Yes, you should modify all database password and application password at docker-
 #### Docker runing failed for the reason that port conflict?
 You should modify ports at [docker-compose file](docker-compose-production.yml) and docker-compose again
 
-#### Do I need to change the password before docker-compose up?  
-Yes, you should modify all database password and application password at docker-compose file for production  
-
-#### What the default username and password?  
-Refer to comment area at the top of docker-compose file  
-
 ### Usage instructions
 
 You can point your browser to: *http://Instance's Internet IP:redmine*  
 
 The following is the information that may be needed during use
+
+#### Credentials
+
+By default, the available users are:
+
+| Username    | Password |
+| ------- | -------- |
+|  admin | 123456  |
 
 #### Services and Ports
 

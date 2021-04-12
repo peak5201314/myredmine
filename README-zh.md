@@ -69,17 +69,19 @@ sudo docker-compose -f docker-compose-production.yml up -d
 修改 [docker-compose](docker-compose-production.yml) 文件中冲突的端口，然后再启动容器
 
 
-#### 启动Redmine前需要更改密码吗？  
-是的, 在生产环境中，您应该在docker compose文件中修改所有数据库密码和应用程序密码  
-
-#### Redmine默认的用户名和密码是什么？  
-请参照[docker-compose file](docker-compose-production.yml)的上方注释区域  
-
 ### 使用说明
 
 启动应用后，本地浏览器访问 URL: *http://服务器公网IP:redmine* 进入应用。  
 
 下面是使用过程中可能需要的信息
+
+#### 账号
+
+本应用默认安装后的管理员用户名和密码如下：
+
+| 用户名    | 密码 |
+| ------- | -------- |
+|  admin | 123456  |
 
 #### 服务和端口
 
