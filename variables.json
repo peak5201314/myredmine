@@ -11,7 +11,12 @@
     "swap": "2",
     "url": "https://www.redmine.org/projects/redmine/wiki/RedmineInstall#Requirements"
   },
-
+  
+  "user": {
+    "username": "admin",
+    "password": "123456"
+  },
+  
   "services":[
     {
       "name": "redmine-server",
@@ -27,11 +32,6 @@
       "description_en": "Accessing MySQL database with TCP",
       "required": "Y"
     }
-  ],
-
-  "user": {
-    "username": "admin",
-    "password": "admin"
-  },
+  ]
 
 }
