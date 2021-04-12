@@ -20,7 +20,7 @@
   "services":[
     {
       "name": "redmine-server",
-      "port": "redmine",
+      "port": "9007",
       "description_cn": "浏览器访问 Redmine",
       "description_en": "Browser access to Redmine by http",
       "required": "Y"
