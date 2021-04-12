@@ -38,8 +38,8 @@ ln -sf /usr/local/bin/docker-compose  /usr/bin
 We assume that you are already familiar with Docker, and you can modify [docker-compose file](docker-compose.yml) by yourself
 
 ```
-git clone --depth=1 https://github.com/Websoft9/docker-redminecommunityserver
-cd docker-redminecommunityserver
+git clone --depth=1 https://github.com/Websoft9/docker-redmine
+cd docker-redmine
 docker-compose up -d
 ```
 
