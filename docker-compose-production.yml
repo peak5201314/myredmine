@@ -12,6 +12,7 @@ services:
     restart: always
     ports:
      - 9007:3000
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes: 
      - ./data/:/usr/src/redmine/files
      - ./plugins:/usr/src/redmine/plugins
