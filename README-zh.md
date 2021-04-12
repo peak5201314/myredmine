@@ -71,7 +71,7 @@ sudo docker-compose -f docker-compose-production.yml up -d
 
 ### 使用说明
 
-启动应用后，本地浏览器访问 URL: *http://服务器公网IP:redmine* 进入应用。  
+启动应用后，本地浏览器访问 URL: *http://服务器公网IP:9007* 进入应用。  
 
 下面是使用过程中可能需要的信息
 
@@ -87,7 +87,7 @@ sudo docker-compose -f docker-compose-production.yml up -d
 
 | 名称 | 端口号 | 用途 |  必要性 |
 | --- | --- | --- | --- |
-| redmine-server | redmine | 浏览器访问 Redmine | Y |
+| redmine-server | 9007 | 浏览器访问 Redmine | Y |
 | mysql | 3306 | TCP 访问mysql数据库 | Y |
 ## 文档
 

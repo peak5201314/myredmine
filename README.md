@@ -66,7 +66,7 @@ You should modify ports at [docker-compose file](docker-compose-production.yml) 
 
 ### Usage instructions
 
-You can point your browser to: *http://Instance's Internet IP:redmine*  
+You can point your browser to: *http://Instance's Internet IP:9007*  
 
 The following is the information that may be needed during use
 
@@ -82,7 +82,7 @@ By default, the available users are:
 
 | Service | Port | Use |  Necessity |
 | --- | --- | --- | --- |
-| redmine-server | redmine | Browser access to Redmine by http | Y |
+| redmine-server | 9007 | Browser access to Redmine by http | Y |
 | mysql | 3306 | Accessing MySQL database with TCP | Y |
 ## Documentation
 
