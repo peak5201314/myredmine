@@ -87,7 +87,7 @@ sudo docker-compose -f docker-compose-production.yml up -d
 | --- | --- | --- | --- |
 | redmine-server | 9003 | 浏览器访问 Redmine | Y |
 | redmine-document-server | 9002 | 浏览器访问 Redmine Document | Y |
-| mysql | 3006 | TCP 访问mysql数据库 | Y |
+| mysql | 3306 | TCP 访问mysql数据库 | Y |
 ## 文档
 
 [Redmine 管理员手册](https://support.websoft9.com/docs/redmine)

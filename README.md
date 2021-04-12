@@ -82,7 +82,7 @@ The following is the information that may be needed during use
 | --- | --- | --- | --- |
 | redmine-server | 9003 | Browser access to Redmine by http | Y |
 | redmine-document-server | 9002 | Browser access to  Redmine Document by http | Y |
-| mysql | 3006 | Accessing MySQL database with TCP | Y |
+| mysql | 3306 | Accessing MySQL database with TCP | Y |
 ## Documentation
 
 [Redmine Administrator Guide](https://support.websoft9.com/docs/redmine)
