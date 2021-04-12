@@ -10,7 +10,7 @@
 
 ## 系统要求
 
-安装本项目，确保符合如下的条件（[详细参考](https://github.com/redmine/docker#recommended-system-requirements)）：
+安装本项目，确保符合如下的条件（[详细参考](https://www.redmine.org/projects/redmine/wiki/RedmineInstall#Requirements)）：
 
 * **操作系统**: Red Hat, CentOS, Debian, Ubuntu 等主流 Linux 操作系统
 * **公有云**: AWS, Azure, Google Cloud, 阿里云, 腾讯云, 华为云等20多个全球主流云
@@ -77,7 +77,7 @@ sudo docker-compose -f docker-compose-production.yml up -d
 
 ### 使用说明
 
-启动应用后，本地浏览器访问 URL: *http://服务器公网IP:9003* 进入应用。  
+启动应用后，本地浏览器访问 URL: *http://服务器公网IP:redmine* 进入应用。  
 
 下面是使用过程中可能需要的信息
 
@@ -85,8 +85,7 @@ sudo docker-compose -f docker-compose-production.yml up -d
 
 | 名称 | 端口号 | 用途 |  必要性 |
 | --- | --- | --- | --- |
-| redmine-server | 9003 | 浏览器访问 Redmine | Y |
-| redmine-document-server | 9002 | 浏览器访问 Redmine Document | Y |
+| redmine-server | redmine | 浏览器访问 Redmine | Y |
 | mysql | 3306 | TCP 访问mysql数据库 | Y |
 ## 文档
 

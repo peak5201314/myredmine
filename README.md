@@ -10,7 +10,7 @@ This repository is an **Cloud Native solution** powered by [Websoft9](https://ww
 
 ## System Requirements
 
-The following are the minimal [recommended requirements](https://github.com/redmine/docker#recommended-system-requirements):
+The following are the minimal [recommended requirements](https://www.redmine.org/projects/redmine/wiki/RedmineInstall#Requirements):
 
 * **OS**: Red Hat, CentOS, Debian, Ubuntu or other's Linux OS
 * **Public Cloud**: More than 20+ major Cloud such as AWS, Azure, Google Cloud, Alibaba Cloud, HUAWEIClOUD, Tencent Cloud
@@ -72,7 +72,7 @@ Refer to comment area at the top of docker-compose file
 
 ### Usage instructions
 
-You can point your browser to: *http://Instance's Internet IP:9003*  
+You can point your browser to: *http://Instance's Internet IP:redmine*  
 
 The following is the information that may be needed during use
 
@@ -80,8 +80,7 @@ The following is the information that may be needed during use
 
 | Service | Port | Use |  Necessity |
 | --- | --- | --- | --- |
-| redmine-server | 9003 | Browser access to Redmine by http | Y |
-| redmine-document-server | 9002 | Browser access to  Redmine Document by http | Y |
+| redmine-server | redmine | Browser access to Redmine by http | Y |
 | mysql | 3306 | Accessing MySQL database with TCP | Y |
 ## Documentation
 
