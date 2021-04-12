@@ -29,7 +29,7 @@
     },
     {
       "name": "mysql",
-      "port": "3006",
+      "port": "3306",
       "description_cn": "TCP 访问mysql数据库",
       "description_en": "Accessing MySQL database with TCP",
       "required": "Y"
