@@ -50,7 +50,6 @@
       "question_en": "What the default username and password?",
       "answer_en": "Refer to comment area at the top of docker-compose file"
     }
-
   ]
 
 }
