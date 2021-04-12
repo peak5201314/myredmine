@@ -29,20 +29,9 @@
     }
   ],
 
-  "faqs": [
-    {
-      "question_cn": "启动Redmine前需要更改密码吗？",
-      "answer_cn": "是的, 在生产环境中，您应该在docker compose文件中修改所有数据库密码和应用程序密码",
-      "question_en": "Do I need to change the password before docker-compose up?",
-      "answer_en": "Yes, you should modify all database password and application password at docker-compose file for production"
-    },
-
-    {
-      "question_cn": "Redmine默认的用户名和密码是什么？",
-      "answer_cn": "请参照[docker-compose file](docker-compose-production.yml)的上方注释区域",
-      "question_en": "What the default username and password?",
-      "answer_en": "Refer to comment area at the top of docker-compose file"
-    }
-  ]
+  "user": {
+    "username": "admin",
+    "password": "admin"
+  },
 
 }
